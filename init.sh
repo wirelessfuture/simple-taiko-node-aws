@@ -19,6 +19,6 @@ cp .env.sample .env
 sudo chown -R ubuntu .
 
 # Pull the latest taiko node image
-sudo docker-compose pull
+sudo docker compose pull
 
 exit 0
