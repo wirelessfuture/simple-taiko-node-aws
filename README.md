@@ -19,10 +19,10 @@ For testnet purposes using AWS cloud is a simple way to get up and running with 
 ## What is being deployed?
 This terraform project by default will deploy one medium sized lightsail instance to the AWS region defined in the `terraform/variables.tf` file. This will cost about ~$20 per month on your AWS account. See above for lightsail pricing link. This lightsail instance will have the minimum specs required to launch a node on Taikos testnet using their simple-taiko-node. 
 
-- 8 GB Memory
+- 4 GB Memory
 - 2 Core Processor
-- 160 GB SSD Disk
-- 5 TB Transfer
+- 80 GB SSD Disk
+- 4 TB Transfer
 
 Only outbound data transfer in excess of your plan's data transfer allowance is subject to overage charges. Please see the [FAQ](https://aws.amazon.com/lightsail/faq/) for more details. 
 
