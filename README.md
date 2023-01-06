@@ -54,7 +54,7 @@ terraform apply
 It will output a list of resources to be created and will ask you to check and confirm with `yes`. Once this is done Terraform will deploy all the resources we defined. Assuming no errors you can now access your lightsail instance either by SSH from your local machine or by accessing the web terminal from aws lightsail console. 
 
 ### Destroy
-If you wish you destroy all the created resources then run this command:
+If you wish to destroy all the created resources then run this command:
 ```
 terraform destroy
 ```
@@ -96,7 +96,7 @@ cd simple-taiko-node
 This command will change the current directory to the simple taiko node directory
 
 ```
-docker-compose up
+docker compose up
 ```
 
 This command starts the configured node. If you want to run it in the background, **please add the -d flag (`docker-compose up -d`)**.
@@ -105,7 +105,7 @@ If this is the first time you start the node, it will synchronize from the genes
 
 ### Stop
 ```
-docker-compose down
+docker compose down
 ```
 
 This command shuts down the node, but will keep all volumes, so next time you restart the node, it won't need to synchronize from the genesis again.
