@@ -2,38 +2,44 @@
 ######     Variables      ######
 ################################
 
-# Resource Name
 variable "resource_name" {
-  type    = string
-  default = "simple-taiko-node-lightsail"
+  type        = string
+  description = "The name of the instance resource in AWS"
+  default     = "simple-taiko-node-lightsail"
 }
 
-# Keypair name
 variable "keypair_name" {
-  type    = string
-  default = "simple-taiko-node-keypair"
+  type        = string
+  description = "The name of the keypair for the instance"
+  default     = "simple-taiko-node-keypair"
 }
 
-# Region 
 variable "aws_region" {
-  type    = string
-  default = "us-east-1"
+  type        = string
+  description = "The AWS region to deploy the instance to"
+  default     = "us-east-1"
 }
 
-# Availability Zone
 variable "availability_zone" {
-  type    = string
-  default = "us-east-1a"
+  type        = string
+  description = "The AWS availability zone to deploy the instance to"
+  default     = "us-east-1a"
 }
 
-# OS Blueprint ID
 variable "blueprint_id" {
-  type    = string
-  default = "ubuntu_20_04"
+  type        = string
+  description = "The OS blueprint ID for the instance"
+  default     = "ubuntu_20_04"
 }
 
-# Instance Bundle ID
 variable "bundle_id" {
-  type    = string
-  default = "medium_2_0"
+  type        = string
+  description = "The bundle ID for the instance type"
+  default     = "medium_2_0"
+}
+
+variable "grafana_port_allowed_ip" {
+  type        = list(string)
+  description = "The allowed IP address for port 3000 (grafana dashboard) on your taiko instance"
+  default     = ["0.0.0.0/32"]
 }

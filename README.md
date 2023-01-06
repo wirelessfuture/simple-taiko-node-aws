@@ -61,6 +61,9 @@ terraform destroy
 
 It will output a list of resources to be destroyed and will ask you to check and confirm with `yes`. Once this is done Terraform will destroy all the resources we defined.
 
+### Making the Grafana dashboard accessible externally
+For this you will need to allow TCP access on port 3000. A variable has already been setup for this, please edit the value `0.0.0.0/32` in the `terraform/variables.tf` file with your own IP address so that the dashboard is only viewable from that IP. 
+
 ### Caution
 Never share or expose your terraform state files, considerable damage can be done if a malicious actor gains hold of them as they typically can contain sensitive data like private keys. The files are typically named `terraform.tfstate` and also the backup as `terraform.tfstate.backup`. See this for more info: https://developer.hashicorp.com/terraform/language/state/sensitive-data
 

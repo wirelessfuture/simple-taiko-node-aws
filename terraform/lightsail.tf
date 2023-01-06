@@ -37,3 +37,18 @@ resource "aws_lightsail_instance" "simple_taiko_node_lightsail" {
 resource "aws_lightsail_key_pair" "simple_taiko_node_keypair" {
   name = var.keypair_name
 }
+
+resource "aws_lightsail_instance_public_ports" "simple_taiko_node_open_ports" {
+  instance_name = aws_lightsail_instance.simple_taiko_node_lightsail.name
+  port_info {
+    protocol  = "tcp"
+    from_port = 3000
+    to_port   = 3000
+    cidrs     = var.grafana_port_allowed_ip
+  }
+  port_info {
+    protocol  = "tcp"
+    from_port = 22
+    to_port   = 22
+  }
+}
