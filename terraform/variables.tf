@@ -35,5 +35,5 @@ variable "blueprint_id" {
 # Instance Bundle ID
 variable "bundle_id" {
   type    = string
-  default = "small_2_0"
+  default = "medium_2_0"
 }

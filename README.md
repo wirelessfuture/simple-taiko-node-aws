@@ -15,9 +15,9 @@ Terraform allows you to define entire cloud environments with code and allows yo
 For testnet purposes using AWS cloud is a simple way to get up and running with Taiko. For the sake of decentralization in mainnet and onwards I would recommend running your nodes from your own location *(internet access, speed and other concerns like power stability are your responsibility)*
 
 ---
-
+aws lightsail get-bundles
 ## What is being deployed?
-This terraform project by default will deploy one small sized lightsail instance to the AWS region defined in the `terraform/variables.tf` file. This will cost about ~$20 per month on your AWS account. See above for lightsail pricing link. This lightsail instance will have the minimum specs required to launch a node on Taikos testnet using their simple-taiko-node. 
+This terraform project by default will deploy one medium sized lightsail instance to the AWS region defined in the `terraform/variables.tf` file. This will cost about ~$20 per month on your AWS account. See above for lightsail pricing link. This lightsail instance will have the minimum specs required to launch a node on Taikos testnet using their simple-taiko-node. 
 
 - 4 GB Memory
 - 2 Core Processor
