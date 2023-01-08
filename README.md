@@ -31,7 +31,7 @@ Only outbound data transfer in excess of your plan's data transfer allowance is 
 * AWS Account
 * Install AWS CLI - https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 * Install Terraform - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-* Configure your AWS credentials: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+* Configure your AWS credentials: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html **(you will need an IAM user that has API access and it needs a policy attachment for Lightsail resources)**
 
 ---
 
